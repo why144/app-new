@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About</title>
-</head>
-<body>
+@extends('layout.main')
 
+@section('container')
     <h1>About</h1>
-    
-</body>
-</html>
+    <h2>Nama : {{ $name }}</h2>
+    <h2>email : {{ $email}}</h2>
+    <img src="img/{{ $img }}" alt="{{ $img }}" width="200">
+@endsection
