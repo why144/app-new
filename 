@@ -1,0 +1,35 @@
+[33mcommit 21b21d2711a83b99126bb467c184d6fb08343e35[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Wahyudi Shho <Wahyudi.Shho@siloamhospitals.com>
+Date:   Sat Aug 10 10:38:24 2024 +0700
+
+    Menambahkan kategori pada postingan, dan menggunakan  eloquent relationship
+
+[33mcommit 78d677e1475fd45b23954ff676ff8474242ab3ed[m
+Author: Wahyudi Shho <Wahyudi.Shho@siloamhospitals.com>
+Date:   Thu Aug 8 21:20:21 2024 +0700
+
+    Koneksi postingan Blog ke Database
+
+[33mcommit 3ce86412ddcf9e21c0d0eab950e8dcf6b1f90109[m
+Author: Wahyudi Shho <Wahyudi.Shho@siloamhospitals.com>
+Date:   Thu Aug 8 19:09:05 2024 +0700
+
+    Membuat model dan controller, Optimalisasi data menggunakan data collection
+
+[33mcommit 4ebefbea8d97ca199a0326afff0841043fa426ad[m
+Author: Wahyudi Shho <Wahyudi.Shho@siloamhospitals.com>
+Date:   Thu Aug 8 15:57:39 2024 +0700
+
+    Menambahkan postingan blog berupa array, tanpa database
+
+[33mcommit fd5490f7c26ba9d3520d2c59120207b57e565a78[m
+Author: Wahyudi Shho <Wahyudi.Shho@siloamhospitals.com>
+Date:   Mon Aug 5 21:30:36 2024 +0700
+
+    Coba route
+
+[33mcommit 8c6df66577b864484675244fb27c0b883fc9490f[m
+Author: Wahyudi Shho <Wahyudi.Shho@siloamhospitals.com>
+Date:   Mon Aug 5 20:58:20 2024 +0700
+
+    Initial Commit
