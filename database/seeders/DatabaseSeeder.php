@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(5)->create();
+        // User::factory(5)->create();
 
         // User::create([
         //     'name' => 'Trafagraw Law',
@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         //     'password' => bcrypt('12345'),
         // ]);
 
-        // User::factory(5)->create();
+        User::factory(5)->create();
 
         Category::create([
             'name' => 'Programming',
@@ -38,6 +38,10 @@ class DatabaseSeeder extends Seeder
         Category::create([
             'name' => 'Web Design',
             'slug' => 'web-design',
+        ]);
+        Category::create([
+            'name' => 'Personal',
+            'slug' => 'personal',
         ]);
 
         Post::factory(20)->create();
