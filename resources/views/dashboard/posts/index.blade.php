@@ -1,4 +1,4 @@
-@extends('dashboard.layouts.main')
+@extends('./dashboard.layouts.main')
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -6,6 +6,12 @@
   </div>
 
   <div class="table-responsive col-lg-8">
+    @if (session()->has('success'))
+    <div class="alert alert-success" role="alert">
+        {{ session('success') }}
+    </div>
+  @endif
+    <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create New Post</a>
     <table class="table table-striped table-sm">
       <thead>
         <tr>
@@ -23,12 +29,19 @@
           <td>{{ $post->category->name }}</td>
           <td>
             <a href="/dashboard/posts/{{ $post->slug }}" class="badge btn-info">Detail</a>
-            <a href="#" class="badge btn-primary">Edit</a>
-            <a href="#" class="badge btn-danger">Hapus</a>
+            <a href="/dashboard/posts/{{ $post->slug }}/edit" class="badge btn-primary">Edit</a>
+            <form action="/dashboard/posts/{{ $post->slug }}" method="POST" class="d-inline">
+              @method('delete')
+              @csrf
+              <button class="badge btn-danger border-0" onclick="return confirm('Are You Sure?')">Hapus</button>
+            </form>
+            
           </td>
         </tr>
         @endforeach
       </tbody>
     </table>
   </div>
+
+
 @endsection
