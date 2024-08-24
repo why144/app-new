@@ -22,7 +22,14 @@
 
     @if ($posts->count())
     <div class="card mb-3">
+        @if ($posts[0]->image)
+            <div style="max-height:350px; overflow:hidden">
+               <img src="{{ asset('storage/' . $posts[0]->image) }}" alt="{{ $posts[0]->category->name }}" class="card-img-top"> 
+            </div>
+        @else  
         <img src="https://picsum.photos/1200/400?{{ $posts[0]->category->name }}" class="card-img-top" alt="...">
+        @endif
+        
         <div class="card-body text-center">
           <h3 class="card-title"><a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none text-dark">{{ $posts[0]->title }}</a></h3>
           <p>
@@ -45,7 +52,14 @@
                     <div class="position-absolute px-3 py-2 text-white" style="background-color: rgb(0,0,0,7)">
                         <a href="/blog?category={{ $post->category->slug}}" class="text-decoration-none text-white">{{ $post->category->name }}</a>
                     </div>
-                    <img src="https://picsum.photos/500/500?{{ $post->category->name }}" class="card-img-top" alt="{{ $post->category->name }}">
+                  @if ($post->image)
+                    <div style="max-height:350px; overflow:hidden">
+                        <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="card-img-top"> 
+                    </div>
+                  @else  
+                  <img src="https://picsum.photos/500/500?{{ $post->category->name }}" class="card-img-top" alt="{{ $post->category->name }}">
+                  @endif
+                    
                     <div class="card-body">
                       <h5 class="card-title"><a href="/posts/{{ $post->slug }}" class="text-decoration-none">{{ $post->title }}</a></h5>
                       <p>
